@@ -167,7 +167,7 @@ export default function PC() {
         <div className="right">
           <div className="title">Get in Touch</div>
           <div className="text">
-            Have questions or feedback? We'd love to hear from you! Reach out to our friendly support team at support@daka.com or follow us on social media for updates and exciting
+            Have questions or feedback? We'd love to hear from you! Reach out to our friendly support team at support@daka.social or follow us on social media for updates and exciting
             community stories
           </div>
         </div>
