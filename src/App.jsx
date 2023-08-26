@@ -1,38 +1,15 @@
-import './App.less';
-import PCPage from './pages/pc';
-import MobilePage from './pages/mobile';
-import { useEffect, useState } from 'react';
-import { isMobileOnly } from 'react-device-detect';
+import { Routes, Route } from "react-router-dom";
 
-let isInit = false;
+import Home from './pages/LandingPage';
+import Policy from './pages/agreements/Policy';
+import Service from './pages/agreements/Service';
 
-export default function APP() {
-  const [isMobile, setIsMobile] = useState(isMobileOnly)
-  let baseMaxWidth = isMobileOnly ? 360 : 1442
-
-  const handleWindowResize = () => {
-    const cw = window.innerWidth; // document.body.clientWidth;
-    
-    if(cw < 900) {
-      setIsMobile(true)
-      baseMaxWidth = 360
-    } else {
-      setIsMobile(false)
-      baseMaxWidth = 1442
-    }
-    document.body.style.zoom = cw / baseMaxWidth;
-  };
-
-  useEffect(() => {
-    if (isInit) return;
-    isInit = true;
-    handleWindowResize();
-    window.addEventListener('resize', handleWindowResize);
-
-    // return () => {
-    //   window.removeEventListener('resize', handleWindowResize);
-    // };
-  }, []);
-
-  return <>{isMobile ? <MobilePage /> : <PCPage />}</>;
+export default function App() {
+  return (
+    <Routes>
+      <Route index path="/" element={<Home />} />
+      <Route index path="/policy" element={<Policy />} />
+      <Route index path="/service" element={<Service />} />
+    </Routes>
+  )
 }
