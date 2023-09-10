@@ -19,7 +19,8 @@ import imgLocation from '../../assets/images/common/location.png';
 
 import GifDaka from '../../components/gif-daka/GifDaka';
 import CommonBar from '../../components/common-bar/CommonBar';
-import DownloadDakaBtn from '../../components/download-daka-btn/DownloadDakaBtn';
+// import DownloadDakaBtn from '../../components/download-daka-btn/DownloadDakaBtn';
+import DownloadBtns from '../../components/download-btns/DownloadBtns';
 import SendEmailBar from '../../components/send-email-bar/SendEmailBar';
 
 import { linkMap, stepPCList } from '../../const/const';
@@ -33,7 +34,7 @@ export default function PC() {
     <div className="daka-pc">
       <div className="layer1 logo-bar">
         <img src={imgLogo} alt="daka" className="logo" />
-        <DownloadDakaBtn />
+        {/* <DownloadDakaBtn /> */}
       </div>
 
       <div className="layer1 row1">
@@ -44,7 +45,10 @@ export default function PC() {
           <div className="text">Track Your Journey, Capture the Moments: Clock-in Your Adventures</div>
         </div>
         <div className="right">
-          <div className="banner-text">Track Your Journey, Capture the Moments: Clock-in Your Adventures</div>
+          <div className="banner-text">
+            <div className="text">App Download</div>
+            <DownloadBtns />
+          </div>
         </div>
       </div>
 
@@ -160,16 +164,17 @@ export default function PC() {
 
       <div className="layer1 box5">
         <div className="left">
-          <div className="title">Download the App</div>
+          {/* <div className="title">Download the App</div>
           <div className="title1">App Coming Soon !</div>
-          <div className="text">Available on App Store and Google Play. Join Daka today and unlock a world of local experiences!</div>
+          <div className="text">Available on App Store and Google Play. Join Daka today and unlock a world of local experiences!</div> */}
+          <div className="text">Have questions or feedback? We'd love to hear from you! Reach out to our friendly support team at <a target="_blank" href="mailto:support@daka.social">support@daka.social</a> or follow us on social media for updates and exciting community stories</div>
         </div>
         <div className="right">
           <div className="title">Get in Touch</div>
-          <div className="text">
+          {/* <div className="text">
             Have questions or feedback? We'd love to hear from you! Reach out to our friendly support team at support@daka.social or follow us on social media for updates and exciting
             community stories
-          </div>
+          </div> */}
         </div>
       </div>
 

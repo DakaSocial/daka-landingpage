@@ -57,21 +57,31 @@
       }
     }
     .right {
+      position: relative;
       width: 720px;
       background-image: url('../../assets/images/common/banner.png');
       background-size: 100% 100%;
       text-align: center;
       .banner-text {
-        margin: 0 auto;
-        width: 476px;
-        margin-top: 508px;
-        font-family: Blow Up;
-        font-size: 64px;
-        font-weight: 300;
-        line-height: 64px;
-        letter-spacing: 0em;
-        text-align: right;
-        color: #72fa93;
+        padding-left: 70px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+
+        .text {
+          margin-top: 237px;
+          margin-bottom: 61px;
+          font-family: Tusker Grotesk;
+          font-size: 100px;
+          font-weight: 600;
+          line-height: 120px;
+          letter-spacing: 0.02em;
+          text-align: left;
+          color: #a0e548;
+        }
       }
     }
   }
@@ -348,78 +358,52 @@
   }
 
   .box5 {
-    height: 887px;
+    width: 100%;
+    // height: 887px;
+    height: 445px;
     display: flex;
 
     .left {
-      padding: 43px 0 0 90px;
+      padding: 89px 0 0 123px;
       width: 946px;
       height: 100%;
       background-image: url('../../assets/images/pc/box5_lbg.svg');
       background-size: 100% 100%;
 
-      .title {
-        font-family: Tusker Grotesk;
-        font-size: 200px;
-        font-weight: 600;
-        line-height: 240px;
-        letter-spacing: 0.02em;
-        text-align: left;
-        color: @cb;
-      }
-
-      .title1 {
-        margin-top: 15px;
-        font-family: Tusker Grotesk;
-        font-size: 90px;
-        font-weight: 600;
-        line-height: 108px;
-        letter-spacing: 0.02em;
-        text-align: left;
-        color: #fff;
-      }
-
       .text {
-        margin-top: 24px;
-        width: 751px;
+        width: 554px;
         font-family: Comfortaa;
         font-size: 32px;
         font-weight: 700;
-        line-height: 38px;
+        line-height: 42px;
         letter-spacing: 0em;
         text-align: left;
-        color: @cb;
+        color: #237DEA;
+
+        a {
+          color: #fff;
+        }
       }
     }
 
     .right {
-      padding: 67px 90px;
-      margin-left: -40px;
-      width: 533px;
+      padding: 67px 0;
+      margin-left: -175px;
+      width: 698.5px;
       height: 100%;
       background-image: url('../../assets/images/pc/box5_rbg.svg');
       background-size: 100% 100%;
 
       .title {
+        margin-left: 254px;
+        color: @cg;
+
         font-family: Tusker Grotesk;
         font-size: 150px;
         font-weight: 600;
         line-height: 180px;
         letter-spacing: 0.02em;
         text-align: left;
-        color: @cg;
-      }
-
-      .text {
-        width: 313px;
-        margin-top: 57px;
-        font-family: Comfortaa;
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 31px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: @cg;
       }
     }
   }
