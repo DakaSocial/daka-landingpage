@@ -18,7 +18,7 @@ import imgInputBaseBg from '../../assets/images/m/input_base_bg.svg';
 import imgInputErrorBg from '../../assets/images/m/input_error_bg.svg';
 
 import GifDaka from '../../components/gif-daka/GifDaka';
-import DownloadDakaBtn from '../../components/download-daka-btn/DownloadDakaBtn';
+import DownloadBtns from '../../components/download-btns/DownloadBtns';
 // import CommonBar from '../../components/common-bar/CommonBar';
 import SendEmailBar from '../../components/send-email-bar/SendEmailBar';
 
@@ -33,7 +33,7 @@ export default function Mobile() {
     <div className="daka-mobile">
       <div className="layer1 logo-bar">
         <img src={imgLogo} alt="" className="logo" />
-        <DownloadDakaBtn />
+        {/* <DownloadDakaBtn /> */}
       </div>
 
       <div className="layer1 logo1-container">
@@ -44,7 +44,10 @@ export default function Mobile() {
       </div>
 
       <div className="layer1 banner-container">
-        <div className="text">Track Your Journey, Capture the Moments: Clock-in Your Adventures</div>
+        <div className="text">
+          <div className="download">App  Download</div>
+          <DownloadBtns />
+        </div>
       </div>
 
       <div className="layer1 box">
@@ -149,19 +152,19 @@ export default function Mobile() {
       </div>
 
       <div className="layer1 box-05">
-        <div className="bar-01">
+        {/* <div className="bar-01">
           <div className="title">
             <div>Download</div>
             <div>the App</div>
           </div>
           <div className="title1">App Coming Soon !</div>
           <div className="text">Available on App Store and Google Play. Join Daka today and unlock a world of local experiences!</div>
-        </div>
+        </div> */}
 
         <div className="bar-02">
           <div className="title">Get in Touch</div>
           <div className="text">
-            Have questions or feedback? We'd love to hear from you! Reach out to our friendly support team at support@daka.social or follow us on social media for updates and exciting
+            Have questions or feedback? We'd love to hear from you! Reach out to our friendly support team at <a target="_blank" href="mailto:support@daka.social">support@daka.social</a> or follow us on social media for updates and exciting
             community stories
           </div>
         </div>

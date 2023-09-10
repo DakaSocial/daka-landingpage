@@ -8,8 +8,8 @@
     padding: 0 16px;
     height: 68px;
     display: flex;
-    justify-content: space-between;
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     background-color: transparent;
     z-index: 10;
 
@@ -46,28 +46,66 @@
   }
 
   .banner-container {
+    position: relative;
     width: 100%;
     height: 400px;
     background-image: url('../../assets/images/common/banner.png');
     background-size: 100% 100%;
 
-    // .banner-text {
-    //   margin-top: 176px;
-    //   margin-left: 24px;
-    //   width: 265px;
-    //   height: 200px;
-    // }
-
     .text {
-      padding-top: 176px;
-      margin-left: 24px;
-      width: 265px;
-      height: 200px;
-      font-family: Blow Up;
-      font-size: 40px;
-      font-weight: 300;
-      line-height: 40px;
-      color: #72fa93;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+
+      .download {
+        margin-top: 77px;
+        margin-bottom: 45px;
+        font-family: Tusker Grotesk;
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 58px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: #a0e548;
+      }
+
+      .download-btns {
+        .btn {
+          padding-left: 18px;
+          width: 180px;
+          height: 45px;
+
+          &:nth-child(2) {
+            margin-top: 32px;
+          }
+
+          .icon {
+            width: 20px;
+            height: 20px;
+          }
+
+          .right-content {
+            margin-left: 5px;
+
+            .tip1 {
+              font-size: 12px;
+              transform: scale(0.85);
+              transform-origin: 0 0;
+            }
+            .tip2 {
+              margin-top: -4px;
+              font-size: 17px;
+              line-height: 18px;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -253,6 +291,7 @@
 
   .box-04 {
     position: relative;
+    padding-bottom: 85px;
     // height: 940px;
 
     .daka-pic {
@@ -324,51 +363,56 @@
   }
 
   .box-05 {
+    padding-top: 296px;
+    position: relative;
     background-image: url('../../assets/images/m/box_05.png');
     background-size: 100% 100%;
 
-    .bar-01 {
-      height: 418px;
-      padding: 40px 24px;
-      background-image: url('../../assets/images/m/box_05_bar_01.svg');
-      background-size: 100% 100%;
+    // .bar-01 {
+    //   height: 418px;
+    //   padding: 40px 24px;
+    //   background-image: url('../../assets/images/m/box_05_bar_01.svg');
+    //   background-size: 100% 100%;
 
-      .title {
-        font-family: Tusker Grotesk;
-        font-size: 64px;
-        font-weight: 600;
-        color: #237dea;
+    //   .title {
+    //     font-family: Tusker Grotesk;
+    //     font-size: 64px;
+    //     font-weight: 600;
+    //     color: #237dea;
 
-        > div {
-          margin-bottom: -13px;
-        }
-      }
+    //     > div {
+    //       margin-bottom: -13px;
+    //     }
+    //   }
 
-      .title1 {
-        margin-top: 12px;
-        font-family: Tusker Grotesk;
-        font-size: 40px;
-        font-weight: 600;
-        color: #fff;
-      }
+    //   .title1 {
+    //     margin-top: 12px;
+    //     font-family: Tusker Grotesk;
+    //     font-size: 40px;
+    //     font-weight: 600;
+    //     color: #fff;
+    //   }
 
-      .text {
-        margin-top: 16px;
-        font-size: 20px;
-        font-family: Comfortaa;
-        font-weight: 700;
-        color: #237dea;
-      }
-    }
+    //   .text {
+    //     margin-top: 16px;
+    //     font-size: 20px;
+    //     font-family: Comfortaa;
+    //     font-weight: 700;
+    //     color: #237dea;
+    //   }
+    // }
 
     .bar-02 {
-      margin-top: -2px;
-      height: 296px;
+      // margin-top: -85px;
+      position: absolute;
+      top: -85px;
+      height: 246px;
       padding: 40px 50px;
       background-image: url('../../assets/images/m/box_05_bar_02.svg');
       background-size: 100% 100%;
 
       .title {
+        margin-top: -80px;
         font-family: Tusker Grotesk;
         font-size: 56px;
         font-weight: 600;
@@ -376,12 +420,17 @@
       }
 
       .text {
+        width: 257px;
         margin-top: 17px;
         font-family: Comfortaa;
         font-size: 15px;
         font-weight: 600;
         line-height: 19.5px;
         color: #a0e548;
+
+        a {
+          color: #fff;
+        }
       }
     }
 
