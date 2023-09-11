@@ -18,15 +18,22 @@ import { useParams } from 'react-router-dom';
 
 export default () => {
   const [data, setData] = useState({});
-  const { name } = useParams()
+  const [btnW, setBtnW] = useState(165)
+  const { name } = useParams();
 
   const handleWindowResize = () => {
-    const cw = window.innerWidth;
+    const maxSize = 600
+    const cw = window.innerWidth < maxSize ? window.innerWidth : maxSize;
     const baseMaxWidth = 375;
-    document.body.style.zoom = cw / baseMaxWidth;
+    if(window.innerWidth < 600) {
+      document.body.style.zoom = cw / baseMaxWidth;
+    } else {
+      document.querySelector('#detail').style.width = `${maxSize}px`
+      setBtnW((maxSize - 45) / 2)
+    }
   };
 
-  const fetchData = (name) => {
+  const fetchData = name => {
     Toast.show({
       icon: 'loading',
       duration: 0,
@@ -55,19 +62,19 @@ export default () => {
     return () => {
       window.removeEventListener('resize', handleWindowResize);
     };
-  }, []); 
+  }, []);
 
   const handleJump = () => {
     const u = navigator.userAgent;
     const isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-    const iOSUrl = 'https://apps.apple.com/cn/app/daka-social/id6459793946'
-    const androidUrl = 'https://play.google.com/store/apps/details?id=social.daka.client'
-    const url = isIOS ? iOSUrl : androidUrl
-    window.open(url)
+    const iOSUrl = 'https://apps.apple.com/cn/app/daka-social/id6459793946';
+    const androidUrl = 'https://play.google.com/store/apps/details?id=social.daka.client';
+    const url = isIOS ? iOSUrl : androidUrl;
+    window.open(url);
   };
 
   return (
-    <div className="detail">
+    <div id="detail">
       {data.id ? (
         <>
           <CommonSwiper data={data} />
@@ -123,12 +130,12 @@ export default () => {
           </div>
 
           <div className="operation">
-            <div className="btn task-btn" onClick={handleJump}>
+            <div className="btn task-btn" style={{ width : `${btnW}px`}} onClick={handleJump}>
               <img src={iconTask} alt="task btn" />
               <span>Task</span>
             </div>
 
-            <div className="btn chat-btn" onClick={handleJump}>
+            <div className="btn chat-btn" style={{ width : `${btnW}px`}} onClick={handleJump}>
               {data.contact && data.contact.telegram ? <img src={iconChat} /> : <img src={iconChatDiscord} />}
               <span>Chat</span>
             </div>

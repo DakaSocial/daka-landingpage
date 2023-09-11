@@ -1,4 +1,5 @@
-.detail {
+#detail {
+  margin: 0 auto;
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
@@ -95,9 +96,10 @@
 
   .operation {
     position: fixed;
-    justify-content: space-between;
+    justify-content: center;
     bottom: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
     height: 90px;
     background-color: #1a1820;
     padding: 10px 15px 20px;
@@ -112,6 +114,10 @@
       line-height: 60px;
       border-radius: 20px;
       background-color: #fff;
+
+      &:first-child {
+        margin-right: 15px;
+      }
 
       & > text {
         margin-left: 4px;
