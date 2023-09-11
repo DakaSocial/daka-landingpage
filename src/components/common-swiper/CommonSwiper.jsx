@@ -8,14 +8,15 @@ export default (props) => {
   return (
     <Swiper
       className='common-swiper'
+      autoplay={true}
+      loop={true}
       indicatorProps={{
         color: 'white',
       }}
-      defaultIndex={1}
     >
-      {[...data.banner, ...data.banner, ...data.banner].map((img, index) => (
+      {data.banner.map((img, index) => (
         <Swiper.Item className="common-swiper-item" key={index}>
-          <img src={img} class="banner" />
+          <img src={img} className="banner" />
         </Swiper.Item>
       ))}
     </Swiper>

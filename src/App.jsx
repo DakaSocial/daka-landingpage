@@ -11,7 +11,7 @@ export default function App() {
       <Route index path="/" element={<Home />} />
       <Route index path="/policy" element={<Policy />} />
       <Route index path="/service" element={<Service />} />
-      <Route index path="/detail" element={<Detail />} />
+      <Route index path="/detail/:name" element={<Detail />} />
     </Routes>
   )
 }

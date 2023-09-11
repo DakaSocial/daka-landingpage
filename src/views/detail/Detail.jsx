@@ -14,9 +14,11 @@ import iconTw from '../../assets/images/detail/Twitter_icon.svg';
 import iconChat from '../../assets/images/detail/icon_chat.svg';
 import iconChatDiscord from '../../assets/images/detail/icon_chat_discord.svg';
 import iconTask from '../../assets/images/detail/icon_task.svg';
+import { useParams } from 'react-router-dom';
 
 export default () => {
   const [data, setData] = useState({});
+  const { name } = useParams()
 
   const handleWindowResize = () => {
     const cw = window.innerWidth;
@@ -24,13 +26,13 @@ export default () => {
     document.body.style.zoom = cw / baseMaxWidth;
   };
 
-  const fetchData = () => {
+  const fetchData = (name) => {
     Toast.show({
       icon: 'loading',
       duration: 0,
     });
     axios
-      .get('https://api.daka.social/task/show/merlion_park')
+      .get(`https://api.daka.social/task/show/${name}`)
       .then(res => {
         const { statusCode, data, message } = res.data;
         if (statusCode === 200) {
@@ -48,15 +50,20 @@ export default () => {
   useEffect(() => {
     handleWindowResize();
     window.addEventListener('resize', handleWindowResize);
-    fetchData();
+    fetchData(name);
 
     return () => {
       window.removeEventListener('resize', handleWindowResize);
     };
-  }, []);
+  }, []); 
 
   const handleJump = () => {
-    console.log(1);
+    const u = navigator.userAgent;
+    const isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    const iOSUrl = 'https://apps.apple.com/cn/app/daka-social/id6459793946'
+    const androidUrl = 'https://play.google.com/store/apps/details?id=social.daka.client'
+    const url = isIOS ? iOSUrl : androidUrl
+    window.open(url)
   };
 
   return (
