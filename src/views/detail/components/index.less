@@ -1,0 +1,107 @@
+.detail-card {
+  margin: 0 15px;
+  color: #000;
+  background: linear-gradient(203.64deg, #75ff53 15.22%, #5effa8 93.43%);
+  border-radius: 20px;
+
+  .top-info {
+    padding: 20px;
+
+    .title {
+      font-family: Comfortaa;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 21px;
+      letter-spacing: 0;
+      text-align: left;
+    }
+
+    .desc {
+      margin-top: 14px;
+      font-family: Comfortaa;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      height: 60px;
+      letter-spacing: 0;
+      text-align: left;
+      overflow-y: scroll;
+    }
+  }
+
+  .bottom-info {
+    position: relative;
+    border-top: 1px dashed rgba(0, 0, 0, 0.1);
+    margin: 0 20px;
+    padding: 20px 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -7px;
+      left: -27px;
+      width: 14px;
+      height: 14px;
+      border-radius: 14px;
+      background-color: #1a1820;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -7px;
+      right: -27px;
+      width: 14px;
+      height: 14px;
+      border-radius: 14px;
+      background-color: #1a1820;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+
+      &:nth-child(n + 1) {
+        padding-top: 10px;
+      }
+
+      .icon {
+      }
+
+      .label {
+        margin-left: 6px;
+        font-family: Comfortaa;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 13px;
+        letter-spacing: 0;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.8);
+      }
+    }
+
+    .reserve-btn {
+      position: absolute;
+      right: 0;
+      bottom: 20px;
+      padding: 10px 15px;
+      font-family: Comfortaa;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      letter-spacing: 0px;
+      text-align: right;
+      color: #fff;
+      background-color: #16151d;
+      border-radius: 14px;
+    }
+
+    .is-reverse {
+      opacity: 0.23;
+
+      text {
+        margin-left: 6px;
+      }
+    }
+  }
+}

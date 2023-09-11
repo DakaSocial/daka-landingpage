@@ -26,3 +26,13 @@ export const loadDakaGif = (cb) => {
 //     };
 //   }
 // }
+
+export function formatTime(time) {
+  const date = new Date(time);
+  const year = date.getFullYear();
+
+  let month = date.getMonth() + 1;
+  let day = date.getDate();
+
+  return `${year}.${month}.${day}`
+}

@@ -2,7 +2,7 @@ import './index.less';
 
 export default function Policy() {
   return (
-    <div className="content">
+    <div className="agreement-content">
       <h1>Privacy Policy</h1>
       <p>Latest Update: August 15, 2023</p>
       <b>Introduction </b>
@@ -232,7 +232,7 @@ export default function Policy() {
         VII. Contact Us 
         </b>
         <p>
-        If you have any complaints, suggestions, questions about personal information protection, or any questions about this policy, you can contact us through the following ways. We will review the issues involved as soon as possible and provide a response within fifteen working days after verifying your user identity: <a target="_blank" rel="noopener noreferrer nofollow" class="link" href="mailto:support@daka.social">support@daka.social</a>
+        If you have any complaints, suggestions, questions about personal information protection, or any questions about this policy, you can contact us through the following ways. We will review the issues involved as soon as possible and provide a response within fifteen working days after verifying your user identity: <a target="_blank" rel="noopener noreferrer nofollow" className="link" href="mailto:support@daka.social">support@daka.social</a>
         </p>
       </div>
     </div>

@@ -2,7 +2,7 @@ import './index.less';
 
 export default function Service() {
   return (
-    <div className="content">
+    <div className="agreement-content">
       <h1>DAKA APP User Services Agreement</h1>
 
       <p>Update Date: August 15, 2023 </p>
@@ -36,7 +36,7 @@ export default function Service() {
 
         <p>
           "DAKA" Platform: Refers to the website with the domain name{' '}
-          <a target="_blank" rel="noopener noreferrer nofollow" class="link" href="https://daka.social/">
+          <a target="_blank" rel="noopener noreferrer nofollow" className="link" href="https://daka.social/">
             https://daka.social/
           </a>
           , the "DAKA" client software, and associated websites or software based on the aforementioned website or software.
@@ -335,7 +335,7 @@ export default function Service() {
             infringing content upon receiving notices from the rights holder or related parties. If you believe that the content on the "DAKA" platform infringes upon your
             legitimate rights and interests, you can provide relevant documents or information (including content links, identity materials, proof of rights, and evidence of
             infringing behavior) to us via email (
-            <a target="_blank" rel="noopener noreferrer nofollow" class="link" href="mailto:support@daka.social">
+            <a target="_blank" rel="noopener noreferrer nofollow" className="link" href="mailto:support@daka.social">
               support@daka.social
             </a>
             ). "DAKA" Company will determine whether to handle the alleged infringing content after receiving a valid notice. Unless proven otherwise, the data stored on "DAKA"
@@ -472,7 +472,7 @@ export default function Service() {
         <p>9.2 If for any reason, part of this Agreement is invalid or unenforceable, the remaining terms remain valid and binding on both parties.</p>
         <p>
           9.3 If you have any opinions or suggestions regarding this Agreement, you can provide feedback to the "DAKA" platform (
-          <a target="_blank" rel="noopener noreferrer nofollow" class="link" href="mailto:support@daka.social">
+          <a target="_blank" rel="noopener noreferrer nofollow" className="link" href="mailto:support@daka.social">
             support@daka.social
           </a>
           ). We will provide you with necessary assistance.
